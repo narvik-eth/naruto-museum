@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sample Mint</title>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.4.umd.min.js"
+      type="application/javascript"
+    ></script>
+    <script src="./mint.js" type="application/javascript"></script>
+  </head>
+  <body>
+    Sample Mint
+    <div>
+      <button onClick="connect()">connect</button>
+    </div>
+    <div id="remain">remain:</div>
+    <div id="sold">sold:</div>
+    <div id="selected-address">address:</div>
+    <div id="has-opened">has opened:</div>
+    <div id="has-pre-opened">has pre opened:</div>
+    <button onClick="whitelist()">check whitelist</button>
+    <div id="whitelist">whitelist:</div>
+    <button id="buyPre" onClick="buyPre(1)">buyPre(1)</button>
+    <button id="buyPre" onClick="buyPre(2)">buyPre(2)</button>
+    <button id="buy" onClick="buy(1)">buy(1)</button>
+    <button id="buy" onClick="buy(2)">buy(2)</button>
+    <div id="tx">tx:</div>
+  </body>
+  <script>
+    getAddress();
+    remain();
+    sold();
+    hasOpened();
+    hasPreOpened();
+  </script>
+</html>
