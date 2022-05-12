@@ -28,11 +28,15 @@ const config: HardhatUserConfig = {
   },
   networks: {
     eth: {
-      url: process.env.ALCHEMY_ETH_WSS_RPC,
+      url: process.env.ALCHEMY_ETH_WSS_RPC || '',
+      accounts,
+    },
+    polygon: {
+      url: process.env.ALCHEMY_POLYGON_WSS_RPC || '',
       accounts,
     },
     mumbai: {
-      url: process.env.ALCHEMY_MUMBAI_WSS_RPC,
+      url: process.env.ALCHEMY_MUMBAI_WSS_RPC || '',
       accounts,
     },
   },
